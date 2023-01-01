@@ -1,0 +1,64 @@
+
+
+
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color:gray ;
+	
+}
+
+.container {
+	margin-top: 80px;
+	max-width: 100rem;
+	padding: 0 2rem 2rem;
+}
+
+.columns {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -1rem -1rem;
+}
+
+.columns-item {
+	flex: 1 0 24rem;
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+.para1{
+	color:wheat;
+	font-size: 20px;
+	padding: 10px;	
+	
+}
+
+.items1{
+	width: 30rem;
+	height: 30rem;
+}
+.item2{
+	width: 30rem;
+	height: 30rem;
+}
+
+
+
+@supports (display: grid) {
+	.columns {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.columns,
+	.columns-item {
+		margin: 0;
+	}
+}
